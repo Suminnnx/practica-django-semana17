@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<h2>{{ titulo }}</h2>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="boton">Guardar</button>
+</form>
+<br>
+<a href="javascript:history.back()">Cancelar</a>
+{% endblock %}
